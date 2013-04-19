@@ -1,11 +1,12 @@
 TestWebHook::Application.routes.draw do
+
+  controller "selfupdates", :path=>"selfupdates" do 
+    post "pull"
+  end
+
   resources :selfupdates
 
-  controller "webhook", :path=>"webhook" do 
-    post "pull"
-    get "test"
-    get "index"
-  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
