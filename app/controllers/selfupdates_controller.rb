@@ -82,7 +82,7 @@ class SelfupdatesController < ApplicationController
   end
 
   def pull
-    result= `ls`
+    result= `pull`
     print result
 
     respond_to do |format|

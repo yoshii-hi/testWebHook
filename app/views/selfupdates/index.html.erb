@@ -17,5 +17,6 @@
 </table>
 
 <br />
-
-<%= link_to 'New Selfupdate', new_selfupdate_path %>
+<%= form_tag(:action => 'pull', :method => :put) do %>
+<%= submit_tag "テスト" %>
+<% end %>
