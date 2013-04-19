@@ -82,8 +82,18 @@ class SelfupdatesController < ApplicationController
   end
 
   def pull
-    result= `pull`
+    result = `ls`
     print result
+
+    result = `git pull`
+    print result
+
+    post '/' do
+      system('git pull')
+      system('rake db:migrate')
+      system('touch tmp/restart.txt')
+      "Succedded"
+    end
 
     respond_to do |format|
       format.html { redirect_to(selfupdates_url) }
