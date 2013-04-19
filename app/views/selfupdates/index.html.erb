@@ -1,0 +1,21 @@
+<h1>Listing selfupdates</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @selfupdates.each do |selfupdate| %>
+  <tr>
+    <td><%= link_to 'Show', selfupdate %></td>
+    <td><%= link_to 'Edit', edit_selfupdate_path(selfupdate) %></td>
+    <td><%= link_to 'Destroy', selfupdate, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Selfupdate', new_selfupdate_path %>

@@ -1,0 +1,2 @@
+module SelfupdateHelper
+end
